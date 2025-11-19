@@ -23,7 +23,7 @@ jobs:
       run: mvn clean package -DskipTests
 
     - name: Run tests with H2
-      run: mvn test
+      run: mvn test -Dspring.profiles.active=test
       env:
         SPRING_PROFILES_ACTIVE: test
 
